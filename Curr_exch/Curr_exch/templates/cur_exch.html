@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+		<title>USD</title>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<td>{{cur_date}}</td>
+				<td>SELL</td>
+				<td>BUY</td>
+				<td>DELTA</td>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td class="tr_bank">{% load staticfiles %}<img src="{% static "trust_logo.gif"%}" alt="Trustbank"/></td>
+					<td>{{trust_usd_sell}}</td>
+					<td>{{trust_usd_buy}}</td>
+					<td>{{trustbank_delta}}</td>
+				</tr>
+				<tr>
+					<td class="pr_bank">{% load staticfiles %}<img src="prior_logo.gif"></td>
+					<td>{{prior_usd_sell}}</td>
+					<td>{{prior_usd_buy}}</td>
+					<td>{{priorbank_delta}}</td>
+				</tr>
+				<tr>
+					<td class="bi_bank">{% load staticfiles %}<img src="bi_logo.png"></td>
+					<td>{{belinvest_usd_sell}}</td>
+					<td>{{belinvest_usd_buy}}</td>
+					<td>{{belinvest_delta}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+
+</html>
